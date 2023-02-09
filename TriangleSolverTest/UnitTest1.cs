@@ -40,5 +40,59 @@ namespace TriangleSolverTest
             string actual = t1.AnalyzeTriangle(5, 3, 3);
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Triangle_Scalene_1_Valid()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(2, 3, 4);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Scalene_2_Valid()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(4, 3, 2);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Scalene_3_Valid()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(6, 4, 5);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Scalene_4_Valid()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(5, 4, 6);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Scalene_5_Valid()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(7, 10, 6);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Zero_Length_1_Valid()
+        {
+            string expected = "Based on the values entered, the triangle is INVALID";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(6, 0, 6);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
