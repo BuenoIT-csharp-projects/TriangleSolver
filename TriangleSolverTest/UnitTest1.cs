@@ -89,9 +89,55 @@ namespace TriangleSolverTest
         [Test]
         public void Triangle_Zero_Length_1_Valid()
         {
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(0, 2, 6);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Zero_Length_2_Valid()
+        {
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(0, 0, 6);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [Test]
+        public void Triangle_Zero_Length_3_Valid()
+        {
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(2, 3, 0);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Other_1_Valid()
+        {
             string expected = "Based on the values entered, the triangle is INVALID";
             Triangle t1 = new Triangle();
-            string actual = t1.AnalyzeTriangle(6, 0, 6);
+            string actual = t1.AnalyzeTriangle(2, 3, 15);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Other_2_Valid()
+        {
+            string expected = "Based on the values entered, the triangle is INVALID";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(90, 1, 2);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Triangle_Other_3_Valid()
+        {
+            string expected = "Based on the values entered, the triangle is INVALID";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(2, 66, 2);
             Assert.AreEqual(expected, actual);
         }
     }
